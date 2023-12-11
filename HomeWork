@@ -1,0 +1,25 @@
+Вывести самый дорогой товар из категории
+
+SELECT *
+FROM Products
+where CategoryID = 4
+order by price desc
+limit 1;
+
+Вывести страны поставщиков, кроме поставщика 1
+SELECT
+Country
+FROM Suppliers
+where not SupplierID = 1;
+
+Вывести клиентов из Germany, имена которых начинаются на t
+SELECT
+CustomerName
+FROM Customers
+where  Country = "Germany"
+and CustomerName like 't%';
+
+Вывести телефоны перевозчиков
+SELECT
+Phone
+FROM Shippers;
